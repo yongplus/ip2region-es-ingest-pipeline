@@ -7,7 +7,7 @@
 ```shell
 bin/elasticsearch-plugin install file:///xxx/ip2region-plugin.zip
 ```
-或者上传到web服务器
+或上传到web服务器
 ```shell
 bin/elasticsearch-plugin install http://xxx/ip2region-plugin.zip
 ```
