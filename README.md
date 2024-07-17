@@ -1,24 +1,24 @@
 ### ip2region
-本插件适用于ElasticSearch8， ES8 Ingest Pipeline插件，基于ip2region从ip中提取省份、城市、运营商信息，对相关索引在数据输入时实现信息提取并存储，方便后续检索、统计等。
-本插件主要解决官方内置GeoIP处理器无法获取运营商信息、国内很多ip无法获取地理信息、地区信息非汉化等问题，对国内使用不够友好。
-在免费版的离线IP数据库中，[ip2region](https://github.com/lionsoul2014/ip2region)通过数据整合，准确率达到99.99%，是个不错选择。
+本插件适用于ElasticSearch8， ES8 Ingest Pipeline插件，基于ip2region从IP中提取省份、城市、运营商信息，对相关索引在数据输入时实现信息提取并存储，方便后续检索、统计等。
+本插件主要解决官方内置GeoIP处理器无法获取运营商信息、国内很多IP无法获取地理信息、地区信息非汉化等问题，对国内使用不够友好。
+[ip2region](https://github.com/lionsoul2014/ip2region)通过数据整合，准确率达到99.99%，是个不错选择。
 
 ### 安装
-通过github包安装：
+通过Github包安装：
 ```shell
 bin/elasticsearch-plugin install https://github.com/yongplus/ip2region-es-ingest-pipeline/releases/download/1.0/ip2region-plugin.zip
 ```
-或上传将包上传到es服务器
+或上传包到es服务器
 ```shell
 bin/elasticsearch-plugin install https://github.com/yongplus/ip2region-es-ingest-pipeline/releases/download/1.0/ip2region-plugin.zip
 ```
 `由于`
 
 ### 参数
-field: ip字段
-target_field：转换的ip信息对象字段，默认regionip
-ignore_missing：默认为false，false文档如果field字段缺少，会抛异常
-properties：返回的属性，数组，默认所有 ["country_name","isp_name", "region_name", "city_name","ip"]
+field: ip字段  
+target_field：转换的ip信息对象字段，默认regionip  
+ignore_missing：默认为false，false文档如果field字段缺少，会抛异常  
+properties：返回的属性，数组，默认所有 ["country_name","isp_name", "region_name", "city_name","ip"]  
 
 ### 运行
 - 创建pipeline
