@@ -1,6 +1,7 @@
 ### ip2region
 本插件适用于ElasticSearch8， ES8 Ingest Pipeline插件，基于ip2region从ip中提取省份、城市、运营商信息，对相关索引在数据输入时实现信息提取并存储，方便后续检索、统计等。
 本插件主要解决官方内置GeoIP处理器无法获取运营商信息、国内很多ip无法获取地理信息、地区信息非汉化等问题，对国内使用不够友好。
+在免费版的离线IP数据库中，ip2region通过三种数据整合，准确率达到99.99%，是个不错选择。
 
 ### 安装
 通过github包安装：
@@ -110,7 +111,7 @@ Response:
 ### 其它
 - 可以通过index.default_pipeline为索引或索引模板指定ingest pipeline
 - [官方Ingest Pipeline文档, 探索更多用法](https://www.elastic.co/guide/en/elasticsearch/reference/current/ingest.html)
-- 关于ip库更新及防范，可以关注[ip2region仓库](https://github.com/lionsoul2014/ip2region)，将生成的ip2region.xdb替换es插件目录下的文件并重启es即可
+- 关于ip库更新及方法，可以关注[ip2region仓库](https://github.com/lionsoul2014/ip2region)，将生成的ip2region.xdb替换es插件目录下的文件并重启es即可
 
 
 ### 我的应用
