@@ -16,8 +16,8 @@ bin/elasticsearch-plugin install https://github.com/yongplus/ip2region-es-ingest
 
 ### 参数
 field: ip字段  
-target_field：转换的ip信息对象字段，默认regionip  
-ignore_missing：默认为false，false文档如果field字段缺少，会抛异常  
+target_field：存储地区信息对象字段，默认regionip  
+ignore_missing：默认为False，文档缺少field字段是否抛异常  
 properties：返回的属性，数组，默认所有 ["country_name","isp_name", "region_name", "city_name","ip"]  
 
 ### 运行
