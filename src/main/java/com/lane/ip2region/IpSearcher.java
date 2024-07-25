@@ -39,8 +39,6 @@ public class IpSearcher {
         try {
             long sTime = System.nanoTime();
             String region = searcher.search(ip);
-            long cost = TimeUnit.NANOSECONDS.toMicros((long) (System.nanoTime() - sTime));
-            //System.out.printf("{region: %s, ioCount: %d, took: %d μs}\n", region, searcher.getIOCount(), cost);
             return RegionInfo.Factory.Create(region);
         } catch (Exception e) {
             throw new RuntimeException("failed to search: "+ip, e);
